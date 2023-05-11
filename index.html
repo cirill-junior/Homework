@@ -11,5 +11,36 @@
     ></script>
     <title>ToDO</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <i class="fa-sharp fa-solid fa-list-check"></i>
+        <h1>ToDo List</h1>
+      </header>
+      <form id="task-form">
+        <div class="form-control">
+          <input
+            type="text"
+            name="task"
+            id="task-input"
+            class="form-input"
+            placeholder="Enter Task"
+          />
+        </div>
+        <div class="form-control">
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-plus"></i> Add task
+          </button>
+        </div>
+      </form>
+      <div class="filter">
+        <input
+          type="text"
+          class="form-input-fitler"
+          id="filter"
+          placeholder="Filter Tasks"
+        />
+      </div>
+    </div>
+  </body>
 </html>
