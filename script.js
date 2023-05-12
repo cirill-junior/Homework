@@ -2,7 +2,7 @@
 
 const taskForm = document.getElementById('task-form');
 const taskInput = document.getElementById('task-input');
-const tasklist = document.getElementById('task-list');
+const taskList = document.getElementById('task-list');
 
 
         //Validation of input
@@ -17,7 +17,7 @@ function addTask(e) {
             alert(`Please add an new task`);
             return; 
         }
-        
+     
         //Create new task and add it to the list
     const li = document.createElement(`li`);
     li.appendChild(document.createTextNode(newTask));
@@ -26,7 +26,7 @@ function addTask(e) {
     const button = createButton(`remove-item btn-link text-red`)
     li.appendChild(button);
     
-    tasklist.appendChild(li);
+    taskList.appendChild(li);
 
     function createButton(classes) {
         const button = document.createElement(`button`);
@@ -41,8 +41,20 @@ function addTask(e) {
         icon.className = classes;
         return icon;
     }
-    }
 
+    function removeItem(e) {
+        console.log(e.target);
+    }
+    
+}
+function removeItem(e){
+    if (e.target.parentElement.classList.contains(`remove-item`)) {
+        e.target.parentElement.parentElement.remove();
+       
+    }
+}
         // Event listener
 taskForm.addEventListener(`submit`, addTask);
+taskList.addEventListener(`click`, removeItem);
+taskList.addEventListener(`click`, removeItem);
 
