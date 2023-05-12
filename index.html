@@ -4,7 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Not an ideal way of adding FontAwesome, but good for now  -->
+    <script
+      src="https://kit.fontawesome.com/b3bcbb0854.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDO</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <i class="fa-solid fa-list-check fa-2xl" id="checklist"></i>
+        <h1>ToDo List</h1>
+      </header>
+      <form id="task-form">
+        <div class="form-control">
+          <input
+            type="text"
+            name="task"
+            id="task-input"
+            class="form-input"
+            placeholder="Enter Task"
+          />
+        </div>
+        <div class="form-control">
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-plus"></i> Add task
+          </button>
+        </div>
+      </form>
+      <div class="filter">
+        <input
+          type="text"
+          class="form-input-filter"
+          id="filter"
+          placeholder="Filter Tasks"
+        />
+      </div>
+      <ul id="task-list" class="items">
+        <!-- Test Tasks -->
+        <li>
+          Buy Apples
+          <button class="remove-item btn-link text-red">
+            <i class="fa-solid fa-check fa-sm"></i>
+          </button>
+        </li>
+        <li>
+          Buy Orange Juice
+          <button class="remove-item btn-link text-red">
+            <i class="fa-solid fa-check fa-lg"></i>
+            <!-- Think about the size difference lg vs sm -->
+          </button>
+        </li>
+        <li>
+          Buy Oreos
+          <button class="remove-item btn-link text-red">
+            <i class="fa-solid fa-check fa-sm"></i>
+          </button>
+        </li>
+        <li>
+          Get Milk
+          <button class="remove-item btn-link text-red">
+            <i class="fa-solid fa-check fa-sm"></i>
+          </button>
+        </li>
+      </ul>
+      <button id="clear" class="btn-clear">Clear All Tasks</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
