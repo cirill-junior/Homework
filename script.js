@@ -1,4 +1,4 @@
-// Taken out uptop for global scope view and ease of function managment 
+// Taking out uptop for global scope view and ease of function managment 
 
 const taskForm = document.getElementById('task-form');
 const taskInput = document.getElementById('task-input');
